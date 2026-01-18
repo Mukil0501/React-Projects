@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mukilan | Web Developer Portfolio</title>
+  <style>
+    :root {
+      --primary: #06b6d4;
+      --accent: #0ea5e9;
+      --light-bg: rgba(255, 255, 255, 0.9);
+      --dark-bg: rgba(0, 0, 0, 0.75);
+      --text-dark: #111827;
+      --text-light: #f9fafb;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat fixed;
+      color: var(--text-light);
+    }
+
+    header {
+      background-color: var(--dark-bg);
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      backdrop-filter: blur(6px);
+    }
+
+    header h2 {
+      font-size: 24px;
+      color: var(--primary);
+    }
+
+    nav a {
+      margin-left: 24px;
+      text-decoration: none;
+      color: var(--text-light);
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--primary);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 30px;
+      padding: 100px 40px;
+      background: var(--dark-bg);
+    }
+
+    .hero-text {
+      max-width: 600px;
+    }
+
+    .hero h1 {
+      font-size: 50px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 22px;
+      margin-bottom: 30px;
+    }
+
+    .hero a {
+      display: inline-block;
+      padding: 12px 28px;
+      background-color: var(--primary);
+      color: white;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .hero a:hover {
+      background-color: var(--accent);
+    }
+
+    .hero-image {
+      text-align: center;
+    }
+
+    .hero-image img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    }
+
+    section {
+      padding: 80px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section-title {
+      font-size: 32px;
+      margin-bottom: 40px;
+      text-align: center;
+      color: var(--accent);
+    }
+
+    .projects {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .card {
+      background: var(--light-bg);
+      color: var(--text-dark);
+      padding: 24px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.4);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: var(--primary);
+    }
+
+    .card a {
+      display: inline-block;
+      margin-top: 10px;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .card a:hover {
+      text-decoration: underline;
+    }
+
+    .card iframe {
+      width: 100%;
+      height: 250px;
+      margin-top: 15px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+    }
+
+    .about p, .contact p {
+      text-align: center;
+      font-size: 18px;
+      line-height: 1.6;
+      background: var(--dark-bg);
+      padding: 20px;
+      border-radius: 10px;
+      color: var(--text-light);
+    }
+
+    .contact a {
+      color: var(--text-light);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .contact a:hover {
+      color: var(--accent);
+    }
+
+    .extras-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .extra-box {
+      background: var(--dark-bg);
+      padding: 24px;
+      border-radius: 10px;
+      color: var(--text-light);
+      text-align: center;
+      font-size: 18px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #e0f2f1;
+      background: var(--dark-bg);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>Mukilan R</h2>
+    <nav>
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="#extras">More</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Hi, I'm Mukilan</h1>
+      <p>A Web Developer</p>
+      <a href="https://www.canva.com/design/DAG7GKeAZ-c/DLGSUqS8_eeztcKxyYFDYQ/view?utm_content=DAG7GKeAZ-c&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h5952519328" download>VIEW MY RESUME</a>
+    </div>
+    <div class="hero-image">
+      <img src="https://github.com/Mukil0501/Portfolio/blob/main/IMG_20221226_135805.jpg?raw=true" alt="Mukilan Photo" />
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>Task Board App</h3>
+        <p>A browser-based task management app that lets users create, edit, and delete tasks. Tasks are organized by status ("To Do", "In Progress", "Done") and can be reordered using drag-and-drop. The app uses local storage to save tasks across sessions and features a clean, responsive interface built with plain HTML, CSS, and JavaScript.</p>
+        <a href="https://github.com/Mukil0501/Task-Board-Management" target="_blank">View on GitHub</a>
+        <a href="https://task-board-management.netlify.app/" target="_blank">View on Preview</a>
+      </div>
+      <div class="card">
+        <h3>Landing Page for Task Board Management</h3>
+        <p>Designed and developed a responsive and modern landing page for a task management web app (TaskBoard). The page includes sections like About, Features, Contact, and a secure Login option that redirects users to the task board. Styled with custom CSS, emojis, and background imagery to enhance user engagement and give a natural, real-world project feel.</p>
+        <a href="https://github.com/Mukil0501/React-Projects/tree/main/taskboard-landing-page" target="_blank">View on GitHub</a>
+        <a href="https://taskboard-landingpage.netlify.app/" target="_blank">View on Preview</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <h2 class="section-title">About Me</h2>
+    <p>I graduated with a degree in Mechanical Engineering, but soon discovered a strong interest in web development. Since then, I’ve completed a full-stack development program where I built hands-on projects using HTML, CSS, JavaScript and React.js. I enjoy creating clean, user-focused websites and applications, and I'm now looking for opportunities to apply my skills, grow as a developer, and contribute to real-world projects.</p>
+  </section>
+
+    <section id="extras" class="extras">
+    <h2 class="section-title">More About Me</h2>
+    <div class="extras-grid">
+      <div class="extra-box">
+        <strong>Skills</strong>
+        <p>HTML, CSS, JavaScript, React.js, Node.js, MySQL, Git & GitHub, Web Development</p>
+      </div>
+      <div class="extra-box">
+        <strong>Strengths</strong>
+        <p>Quick Learner, Problem Solver, Communication, Adaptability</p>
+      </div>
+      <div class="extra-box">
+        <strong>Availability</strong>
+        <p>Ready to work immediately. Open to full-time, internship</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="education" class="extras">
+  <h2 class="section-title">Education & Certifications</h2>
+  <div class="extras-grid">
+    <div class="extra-box">
+      <strong>🎓 Education</strong>
+      <p>B.E. Mechanical Engineering<br />Jeppiaar Institute of Technology, Chennai<br />CGPA - 7.90%<br />2018 - 2022</p>
+    </div>
+    <div class="extra-box">
+      <strong>📜 Certifications</strong>
+      <p>Full-Stack Web Development Course<br /></p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+    <h2 class="section-title">Contact</h2>
+    <p>Email: <a href="mailto:rmukil2001@gmail.com">rmukil2001@gmail.com</a></p>
+    <p>GitHub: <a href="https://github.com/Mukil0501" target="_blank">Mukil0501</a></p>
+  </section>
+
+  <footer>
+    &copy; 2025 Mukilan. All rights reserved.
+  </footer>
+</body>
+</html>
